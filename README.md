@@ -40,4 +40,4 @@ Plain HTML, CSS and JavaScript for now. The full version will be a proper full s
 
 ## About me
 
-I'm Yusupha, a game developer moving into software development. I'm teaching myself full stack development by building real projects, and this is my third one. I'm documenting every stage on GitHub and LinkedIn as I go.
+I'm Yusupha, a game developer moving into software development. I'm teaching myself full stack development by building real projects, and this is my third one.
