@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "title": "Warehouse Rave: Neon Nights",
+    "description": "Four floors of techno, visuals and a rooftop bar.",
+    "category": "wild",
+    "start": "2026-10-24T22:00",
+    "end": "2026-10-25T05:00",
+    "venue": {
+      "name": "The Old Foundry",
+      "address": "Strada Exemplu 12, Bucharest"
+    },
+    "price": 80,
+    "ticketLink": "https://example.com/tickets",
+    "image": null,
+    "imageShape": "portrait",
+    "dressCode": "Bright neon attire, rave accessories",
+    "ageRestriction": "18+",
+    "organiser": "Neon Collective",
+    "recurring": null
+  },
+  {
+    "id": 2,
+    "title": "TableCon Bucharest 2026",
+    "description": "A three-day convention celebrating board games, card games, and tabletop RPGs.",
+    "category": "cozy",
+    "start": "2026-11-15T10:00",
+    "end": "2026-11-17T18:00",
+    "venue": {
+      "name": "ciorogirla convention Center",
+      "address": "Strada Exemplu 25, Bucharest"
+    },
+    "price": 60,
+    "ticketLink": "https://example.com/tickets",
+    "image": null,
+    "imageShape": "landscape",
+    "dressCode": null,
+    "ageRestriction": "All ages",
+    "organiser": "Board Game Collections",
+    "recurring": null
+  },
+  {
+    "id": 3,
+    "title": "Bamilton: The Musical - Bucharest Premiere",
+    "description": "Experience the magic of Bamilton in Bucharest with a live performance of the hit musical.",
+    "category": "inspiring",
+    "start": "2026-12-01T19:00",
+    "end": "2026-12-01T21:00",
+    "venue": {
+      "name": "Some Theater Voluntari",
+      "address": "Strada Exemplu 16, Bucharest"
+    },
+    "price": 225,
+    "ticketLink": "https://example.com/tickets",
+    "image": null,
+    "imageShape": "portrait",
+    "dressCode": null,
+    "ageRestriction": "10+",
+    "organiser": "Some Theater Voluntari",
+    "recurring": null
+  },
+  {
+    "id": 4,
+    "title": "Talk Tech & Startups",
+    "description": "Join us for a night of networking and discussion about the latest in technology and startups.",
+    "category": "thriving",
+    "start": "2026-12-15T18:00",
+    "end": "2026-12-15T21:00",
+    "venue": {
+      "name": "Tech Hub",
+      "address": "Strada Exemplu 3, Bucharest"
+    },
+    "price": 75,
+    "ticketLink": "https://example.com/tickets",
+    "image": null,
+    "imageShape": "landscape",
+    "dressCode": null,
+    "ageRestriction": "All ages",
+    "organiser": "Tech Hub",
+    "recurring": null
+  },
+  {
+    "id": 5,
+    "title": "Free Sunrise Yoga in the Park",
+    "description": "A gentle outdoor yoga flow to start your Sunday. All levels welcome, just bring a mat and a bottle of water.",
+    "category": "cozy",
+    "start": "2026-10-25T08:00",
+    "end": "2026-10-25T09:15",
+    "venue": {
+      "name": "Linden Park, Main Lawn",
+      "address": "Aleea Fictiva 1, Bucharest"
+    },
+    "price": 0,
+    "ticketLink": null,
+    "image": "images/sunrise-yoga.jpg",
+    "imageShape": "square",
+    "dressCode": "Comfortable clothes, bring a mat",
+    "ageRestriction": "All ages",
+    "organiser": "Park Flow Collective",
+    "recurring": "weekly"
+  },
+  {
+    "id": 6,
+    "title": "Open Mic Night at Cafe Lumen",
+    "description": "Music, poetry and stand-up from local people. Sign up at the door or just come to listen.",
+    "category": "inspiring",
+    "start": "2026-10-21T20:30",
+    "end": "2026-10-21T23:00",
+    "venue": {
+      "name": "Cafe Lumen",
+      "address": "Strada Exemplu 41, Bucharest"
+    },
+    "price": 0,
+    "ticketLink": null,
+    "image": null,
+    "imageShape": "square",
+    "dressCode": null,
+    "ageRestriction": "All ages",
+    "organiser": "Lumen Open Mic",
+    "recurring": "weekly"
+  },
+  {
+    "id": 7,
+    "title": "Lunchtime Language Exchange",
+    "description": "Swap Romanian and English over coffee. Tables are grouped by level so everyone gets time to talk.",
+    "category": "thriving",
+    "start": "2026-10-21T12:00",
+    "end": "2026-10-21T14:00",
+    "venue": {
+      "name": "The Coworking Loft",
+      "address": "Strada Exemplu 9, Bucharest"
+    },
+    "price": 0,
+    "ticketLink": null,
+    "image": null,
+    "imageShape": "square",
+    "dressCode": null,
+    "ageRestriction": "All ages",
+    "organiser": "Tandem Bucharest",
+    "recurring": null
+  },
+  {
+    "id": 8,
+    "title": "Silent Disco: Headphones On",
+    "description": "Three channels, three DJs, one dance floor. Pick your channel and switch whenever you like.",
+    "category": "wild",
+    "start": "2026-10-22T21:00",
+    "end": "2026-10-23T02:00",
+    "venue": {
+      "name": "Basement 44",
+      "address": "Bulevardul Imaginar 44, Bucharest"
+    },
+    "price": 45,
+    "ticketLink": "https://example.com/tickets",
+    "image": "images/silent-disco.jpg",
+    "imageShape": "portrait",
+    "dressCode": "Wear something you can dance in",
+    "ageRestriction": "18+",
+    "organiser": "Quiet Riot Events",
+    "recurring": null
+  },
+  {
+    "id": 9,
+    "title": "Pottery Night for Beginners",
+    "description": "Learn to shape a bowl on the wheel with a small group. All materials included and your piece is fired for you.",
+    "category": "cozy",
+    "start": "2026-10-23T18:30",
+    "end": "2026-10-23T21:00",
+    "venue": {
+      "name": "Clay & Co Studio",
+      "address": "Strada Exemplu 18, Bucharest"
+    },
+    "price": 120,
+    "ticketLink": "https://example.com/tickets",
+    "image": "images/pottery-night.jpg",
+    "imageShape": "square",
+    "dressCode": "Clothes you do not mind getting messy",
+    "ageRestriction": "16+",
+    "organiser": "Clay & Co",
+    "recurring": "weekly"
+  },
+  {
+    "id": 10,
+    "title": "Indie Film Night: Short Films from Local Directors",
+    "description": "An evening of short films followed by a relaxed Q&A with the filmmakers.",
+    "category": "inspiring",
+    "start": "2026-10-24T20:00",
+    "end": null,
+    "venue": {
+      "name": "Cinema Atelier",
+      "address": "Piata Exemplu 5, Bucharest"
+    },
+    "price": 25,
+    "ticketLink": "https://example.com/tickets",
+    "image": "images/indie-film-night.jpg",
+    "imageShape": "landscape",
+    "dressCode": null,
+    "ageRestriction": "16+",
+    "organiser": "Atelier Film Club",
+    "recurring": null
+  },
+  {
+    "id": 11,
+    "title": "Riverside Picnic Meetup",
+    "description": "Bring a blanket and some snacks and meet new people by the water. Games and a frisbee will be there.",
+    "category": "cozy",
+    "start": "2026-10-24T13:00",
+    "end": "2026-10-24T17:00",
+    "venue": {
+      "name": "Riverside Walk, Meadow Steps",
+      "address": "Aleea Fictiva 22, Bucharest"
+    },
+    "price": 0,
+    "ticketLink": null,
+    "image": null,
+    "imageShape": "square",
+    "dressCode": "Bring a blanket",
+    "ageRestriction": "All ages",
+    "organiser": "Meadow Meetups",
+    "recurring": null
+  },
+  {
+    "id": 12,
+    "title": "Halloween Costume Party",
+    "description": "Prizes for best costume, a spooky cocktail menu and a live DJ until sunrise.",
+    "category": "wild",
+    "start": "2026-10-31T21:00",
+    "end": "2026-11-01T04:00",
+    "venue": {
+      "name": "The Velvet Cellar",
+      "address": "Strada Exemplu 66, Bucharest"
+    },
+    "price": 100,
+    "ticketLink": "https://example.com/tickets",
+    "image": "images/halloween-party.jpg",
+    "imageShape": "portrait",
+    "dressCode": "Costume required",
+    "ageRestriction": "18+",
+    "organiser": "Velvet Nights",
+    "recurring": null
+  },
+  {
+    "id": 13,
+    "title": "Annual Bucharest International Festival of Contemporary Art, Performance and Experimental Sound: Opening Weekend Celebration",
+    "description": "Three days of installations, live performance and experimental sound across six rooms. The opening weekend includes guided tours every hour, a panel with the invited artists, a late evening concert in the main hall and a market of independent publishers and zine makers. Some rooms have limited capacity, so arrive early if you want to see the performances. Food and drinks are available throughout the weekend, and the main hall has seating for people who need it.",
+    "category": "inspiring",
+    "start": "2026-10-30T17:00",
+    "end": "2026-11-01T22:00",
+    "venue": {
+      "name": "Hall of Mirrors Arts Centre",
+      "address": "Bulevardul Imaginar 2, Bucharest"
+    },
+    "price": 35,
+    "ticketLink": "https://example.com/tickets",
+    "image": "images/contemporary-art-festival.jpg",
+    "imageShape": "landscape",
+    "dressCode": null,
+    "ageRestriction": "All ages",
+    "organiser": "Contemporary Arts Association",
+    "recurring": null
+  },
+  {
+    "id": 14,
+    "title": "Salsa Under the Stars",
+    "description": "A beginner friendly class at 8pm, then open social dancing on the terrace until late.",
+    "category": "wild",
+    "start": "2026-10-23T20:00",
+    "end": "2026-10-24T01:00",
+    "venue": {
+      "name": "Terraza Alta",
+      "address": "Strada Exemplu 30, Bucharest"
+    },
+    "price": 30,
+    "ticketLink": "https://example.com/tickets",
+    "image": null,
+    "imageShape": "portrait",
+    "dressCode": "Shoes you can dance in",
+    "ageRestriction": "16+",
+    "organiser": "Ritmo Social",
+    "recurring": null
+  },
+  {
+    "id": 15,
+    "title": "Weekend Maker Market",
+    "description": "Over 60 stalls of handmade ceramics, prints, jewellery and food from local makers.",
+    "category": "thriving",
+    "start": "2026-10-25T10:00",
+    "end": "2026-10-25T18:00",
+    "venue": {
+      "name": "The Glass Courtyard",
+      "address": "Piata Exemplu 14, Bucharest"
+    },
+    "price": 0,
+    "ticketLink": null,
+    "image": "images/maker-market.jpg",
+    "imageShape": "square",
+    "dressCode": null,
+    "ageRestriction": "All ages",
+    "organiser": "Makers Yard",
+    "recurring": null
+  },
+  {
+    "id": 16,
+    "title": "Intro to Web Development Workshop",
+    "description": "A hands on evening where you build your first web page from scratch. Bring a laptop and no experience is needed.",
+    "category": "thriving",
+    "start": "2026-10-28T18:00",
+    "end": "2026-10-28T21:00",
+    "venue": {
+      "name": "Code Corner",
+      "address": "Strada Exemplu 51, Bucharest"
+    },
+    "price": 50,
+    "ticketLink": "https://example.com/tickets",
+    "image": null,
+    "imageShape": "landscape",
+    "dressCode": "Bring your laptop",
+    "ageRestriction": "16+",
+    "organiser": "Code Corner",
+    "recurring": null
+  },
+  {
+    "id": 17,
+    "title": "Sunset Sounds Open Air Festival",
+    "description": "Three days and nights of live bands and DJs across two stages, with camping and food trucks on site.",
+    "category": "wild",
+    "start": "2026-11-06T16:00",
+    "end": "2026-11-08T23:00",
+    "venue": {
+      "name": "Meadow Fields Festival Ground",
+      "address": "Drumul Fictiv km 8, near Bucharest"
+    },
+    "price": 250,
+    "ticketLink": "https://example.com/tickets",
+    "image": "images/sunset-sounds.jpg",
+    "imageShape": "portrait",
+    "dressCode": "Comfortable shoes, weather dependent",
+    "ageRestriction": "16+",
+    "organiser": "Sunset Sounds Live",
+    "recurring": null
+  },
+  {
+    "id": 18,
+    "title": "Cozy Book Club and Hot Chocolate",
+    "description": "This month we are reading a short novel and talking about it over hot chocolate. Come even if you did not finish it.",
+    "category": "cozy",
+    "start": "2026-11-04T18:00",
+    "end": "2026-11-04T20:00",
+    "venue": {
+      "name": "The Reading Room Cafe",
+      "address": "Strada Exemplu 27, Bucharest"
+    },
+    "price": 10,
+    "ticketLink": null,
+    "image": null,
+    "imageShape": "square",
+    "dressCode": null,
+    "ageRestriction": "All ages",
+    "organiser": "Reading Room Readers",
+    "recurring": "weekly"
+  },
+  {
+    "id": 19,
+    "title": "Photography Exhibition: Bucharest After Dark",
+    "description": "Fifty photographs of the city at night by six local photographers. The exhibition runs all month.",
+    "category": "inspiring",
+    "start": "2026-11-05T10:00",
+    "end": "2026-11-30T18:00",
+    "venue": {
+      "name": "Gallery Noor",
+      "address": "Piata Exemplu 8, Bucharest"
+    },
+    "price": 0,
+    "ticketLink": null,
+    "image": "images/photo-exhibition.jpg",
+    "imageShape": "landscape",
+    "dressCode": null,
+    "ageRestriction": "All ages",
+    "organiser": "Gallery Noor",
+    "recurring": null
+  },
+  {
+    "id": 20,
+    "title": "Founders Breakfast",
+    "description": "Early morning coffee and a short talk from a local founder, then time to meet other people building things.",
+    "category": "thriving",
+    "start": "2026-11-12T08:30",
+    "end": null,
+    "venue": {
+      "name": "Tech Hub",
+      "address": "Strada Exemplu 3, Bucharest"
+    },
+    "price": 40,
+    "ticketLink": "https://example.com/tickets",
+    "image": null,
+    "imageShape": "landscape",
+    "dressCode": null,
+    "ageRestriction": "All ages",
+    "organiser": "Tech Hub",
+    "recurring": null
+  }
+]
