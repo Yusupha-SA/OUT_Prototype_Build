@@ -1,3 +1,10 @@
+const CATEGORIES = [
+  { id: "wild", label: "Wild" },
+  { id: "cozy", label: "Cozy/Comfy" },
+  { id: "inspiring", label: "Inspiring" },
+  { id: "thriving", label: "Thriving" },
+];
+
 async function loadEvents() {
   const response = await fetch("events.json");
   const events = await response.json();
@@ -24,6 +31,11 @@ function formatDate(start) {
   });
 }
 
+function getCategoryLabel(categoryId) {
+  const category = CATEGORIES.find((item) => item.id === categoryId);
+  return category.label;
+}
+
 function createEventCard(eventData) {
   const card = document.createElement("li");
   card.classList.add("card");
@@ -37,6 +49,11 @@ function createEventCard(eventData) {
   venue.classList.add("card-venue");
   venue.textContent = eventData.venue.name;
   card.appendChild(venue);
+
+  const category = document.createElement("p");
+  category.classList.add("card-category");
+  category.textContent = getCategoryLabel(eventData.category);
+  card.appendChild(category);
 
   const price = document.createElement("p");
   price.classList.add("card-price");
