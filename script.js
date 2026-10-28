@@ -12,6 +12,18 @@ function formatPrice(price) {
   return `${price} RON`;
 }
 
+function formatDate(start) {
+  const date = new Date(start);
+  return date.toLocaleString("en-GB", {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  });
+}
+
 function createEventCard(eventData) {
   const card = document.createElement("li");
   card.classList.add("card");
@@ -30,6 +42,11 @@ function createEventCard(eventData) {
   price.classList.add("card-price");
   price.textContent = formatPrice(eventData.price);
   card.appendChild(price);
+
+  const date = document.createElement("p");
+  date.classList.add("card-date");
+  date.textContent = formatDate(eventData.start);
+  card.appendChild(date);
 
   return card;
 }
