@@ -1,7 +1,7 @@
 const CATEGORIES = [
   { id: "wild", label: "Wild" },
   { id: "cozy", label: "Cozy/Comfy" },
-  { id: "inspiring", label: "Inspiring" },
+  { id: "curious", label: "Curious" },
   { id: "thriving", label: "Thriving" },
 ];
 
@@ -50,10 +50,17 @@ function createEventCard(eventData) {
   venue.textContent = eventData.venue.name;
   card.appendChild(venue);
 
-  const category = document.createElement("p");
-  category.classList.add("card-category");
-  category.textContent = getCategoryLabel(eventData.category);
-  card.appendChild(category);
+  const categoryRow = document.createElement("div");
+  categoryRow.classList.add("card-categories");
+
+  for (const categoryId of eventData.categories) {
+    const tag = document.createElement("span");
+    tag.classList.add("card-category", `category-${categoryId}`);
+    tag.textContent = getCategoryLabel(categoryId);
+    categoryRow.appendChild(tag);
+  }
+
+  card.appendChild(categoryRow);
 
   const price = document.createElement("p");
   price.classList.add("card-price");
