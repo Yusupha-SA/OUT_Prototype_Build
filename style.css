@@ -1,0 +1,45 @@
+#event-list {
+  padding: 0;
+}
+
+.card {
+  list-style: none;
+  max-width: 360px;
+  margin: 0 auto 24px;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #111;
+}
+
+.category-wild { background: #f15a24; }
+.category-cozy { background: #e6cf2a; }
+.category-curious { background: #a06cb0; }
+.category-thriving { background: #6db3e8; }
+
+.card-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.card-categories {
+  display: flex;
+  gap: 8px;
+}
+
+.card-category {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}

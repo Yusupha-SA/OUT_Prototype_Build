@@ -36,8 +36,27 @@ function getCategoryLabel(categoryId) {
   return category.label;
 }
 
+function createFallback(eventData) {
+  const fallback = document.createElement("div");
+  fallback.classList.add("card-image", "card-fallback", `category-${eventData.categories[0]}`);
+  fallback.textContent = eventData.title;
+  return fallback;
+}
+
 function createEventCard(eventData) {
   const card = document.createElement("li");
+ if (eventData.image) {
+  const image = document.createElement("img");
+  image.classList.add("card-image");
+  image.src = eventData.image;
+  image.alt = eventData.title;
+  image.addEventListener("error", () => {
+    image.replaceWith(createFallback(eventData));
+  });
+  card.appendChild(image);
+} else {
+  card.appendChild(createFallback(eventData));
+}
   card.classList.add("card");
 
   const title = document.createElement("h2");
