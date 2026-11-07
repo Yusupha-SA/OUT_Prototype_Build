@@ -5,11 +5,29 @@ const CATEGORIES = [
   { id: "thriving", label: "Thriving" },
 ];
 
+// State: things the page needs to remember
+let events = [];        // all the events, filled in when the page loads
+let currentIndex = 0;   // which event we are showing
+let savedEvents = [];   // events the person has saved
+
+// Buttons on the page
+const skipButton = document.getElementById("skip-button");
+const saveButton = document.getElementById("save-button");
+
+const DATA_DATE = new Date("2026-10-21T00:00"); // the day the fake events were written for
+
+function getDaysToShift() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const msPerDay = 24 * 60 * 60 * 1000;
+  return Math.round((today - DATA_DATE) / msPerDay);
+}
+
 async function loadEvents() {
   const response = await fetch("events.json");
-  const events = await response.json();
-  showEvents(events);
-  console.log(events);
+  events = await response.json();
+  showCurrentEvent();
+  console.log("days to shift:", getDaysToShift());
 }
 
 function formatPrice(price) {
@@ -36,6 +54,15 @@ function getCategoryLabel(categoryId) {
   return category.label;
 }
 
+function isSaved(eventData) {
+  return savedEvents.some((item) => item.id === eventData.id);
+}
+
+function updateSaveButton() {
+  const currentEvent = events[currentIndex];
+  saveButton.textContent = isSaved(currentEvent) ? "Saved" : "Save";
+}
+
 function createFallback(eventData) {
   const fallback = document.createElement("div");
   fallback.classList.add("card-image", "card-fallback", `category-${eventData.categories[0]}`);
@@ -45,19 +72,20 @@ function createFallback(eventData) {
 
 function createEventCard(eventData) {
   const card = document.createElement("li");
- if (eventData.image) {
-  const image = document.createElement("img");
-  image.classList.add("card-image");
-  image.src = eventData.image;
-  image.alt = eventData.title;
-  image.addEventListener("error", () => {
-    image.replaceWith(createFallback(eventData));
-  });
-  card.appendChild(image);
-} else {
-  card.appendChild(createFallback(eventData));
-}
   card.classList.add("card");
+
+  if (eventData.image) {
+    const image = document.createElement("img");
+    image.classList.add("card-image");
+    image.src = eventData.image;
+    image.alt = eventData.title;
+    image.addEventListener("error", () => {
+      image.replaceWith(createFallback(eventData));
+    });
+    card.appendChild(image);
+  } else {
+    card.appendChild(createFallback(eventData));
+  }
 
   const title = document.createElement("h2");
   title.classList.add("card-title");
@@ -94,13 +122,31 @@ function createEventCard(eventData) {
   return card;
 }
 
-function showEvents(events) {
+function showCurrentEvent() {
   const eventsContainer = document.getElementById("event-list");
+  eventsContainer.innerHTML = "";
 
-  for (const eventData of events) {
-    const card = createEventCard(eventData);
-    eventsContainer.appendChild(card);
-  }
+  const card = createEventCard(events[currentIndex]);
+  eventsContainer.appendChild(card);
+
+  updateSaveButton();
 }
+
+function showNextEvent() {
+  currentIndex = (currentIndex + 1) % events.length;
+  showCurrentEvent();
+}
+
+skipButton.addEventListener("click", showNextEvent);
+
+saveButton.addEventListener("click", () => {
+  const currentEvent = events[currentIndex];
+
+  if (!isSaved(currentEvent)) {
+    savedEvents.push(currentEvent);
+  }
+
+  updateSaveButton();
+});
 
 loadEvents();
