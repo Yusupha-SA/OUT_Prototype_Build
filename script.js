@@ -8,7 +8,7 @@ const CATEGORIES = [
 // State: things the page needs to remember
 let events = [];        // all the events, filled in when the page loads
 let currentIndex = 0;   // which event we are showing
-let savedEvents = [];   // events the person has saved
+let savedIds = JSON.parse(localStorage.getItem("savedIds")) || [];
 
 // Buttons on the page
 const skipButton = document.getElementById("skip-button");
@@ -55,7 +55,7 @@ function getCategoryLabel(categoryId) {
 }
 
 function isSaved(eventData) {
-  return savedEvents.some((item) => item.id === eventData.id);
+  return savedIds.includes(eventData.id);
 }
 
 function updateSaveButton() {
@@ -143,7 +143,8 @@ saveButton.addEventListener("click", () => {
   const currentEvent = events[currentIndex];
 
   if (!isSaved(currentEvent)) {
-    savedEvents.push(currentEvent);
+    savedIds.push(currentEvent.id);
+    localStorage.setItem("savedIds", JSON.stringify(savedIds));
   }
 
   updateSaveButton();
